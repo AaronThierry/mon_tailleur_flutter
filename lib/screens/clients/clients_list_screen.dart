@@ -123,7 +123,7 @@ class _ClientsListScreenState extends State<ClientsListScreen> {
     final confirm = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        backgroundColor: AppTheme.cardDark,
+        backgroundColor: AppTheme.cardBackground,
         title: Text(
           'Confirmer la suppression',
           style: GoogleFonts.poppins(color: Colors.white),
@@ -177,9 +177,9 @@ class _ClientsListScreenState extends State<ClientsListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppTheme.backgroundDark,
+      backgroundColor: AppTheme.darkBackground,
       appBar: AppBar(
-        backgroundColor: AppTheme.backgroundDark,
+        backgroundColor: AppTheme.darkBackground,
         elevation: 0,
         title: Text(
           'Clients',
@@ -226,7 +226,7 @@ class _ClientsListScreenState extends State<ClientsListScreen> {
                       )
                     : null,
                 filled: true,
-                fillColor: AppTheme.cardDark,
+                fillColor: AppTheme.cardBackground,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
                   borderSide: BorderSide.none,
@@ -357,7 +357,7 @@ class _ClientsListScreenState extends State<ClientsListScreen> {
     return Container(
       margin: EdgeInsets.only(bottom: 12),
       decoration: BoxDecoration(
-        color: AppTheme.cardDark,
+        color: AppTheme.cardBackground,
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
@@ -433,7 +433,7 @@ class _ClientsListScreenState extends State<ClientsListScreen> {
                     ),
                     PopupMenuButton<String>(
                       icon: Icon(Icons.more_vert, color: AppTheme.textSecondary),
-                      color: AppTheme.cardDark,
+                      color: AppTheme.cardBackground,
                       onSelected: (value) {
                         if (value == 'edit') {
                           _navigateToForm(client: client);

@@ -58,7 +58,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppTheme.backgroundDark,
+      backgroundColor: AppTheme.darkBackground,
       body: RefreshIndicator(
         onRefresh: _loadStats,
         child: _buildBody(),
@@ -332,7 +332,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     return Container(
       padding: EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: AppTheme.cardDark,
+        color: AppTheme.cardBackground,
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(
@@ -446,7 +446,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
       return Container(
         padding: EdgeInsets.all(32),
         decoration: BoxDecoration(
-          color: AppTheme.cardDark,
+          color: AppTheme.cardBackground,
           borderRadius: BorderRadius.circular(16),
         ),
         child: Center(
@@ -491,7 +491,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
       margin: EdgeInsets.only(bottom: 12),
       padding: EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: AppTheme.cardDark,
+        color: AppTheme.cardBackground,
         borderRadius: BorderRadius.circular(12),
         border: urgent
             ? Border.all(color: Colors.orange, width: 2)

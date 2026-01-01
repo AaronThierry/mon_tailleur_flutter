@@ -98,6 +98,9 @@ class User {
   bool get isClient => role == UserRole.client;
   bool get canManageOrders => role == UserRole.admin || role == UserRole.employe;
 
+  // Getter pour compatibilité avec l'API qui utilise "name" au lieu de "prenom"
+  String get prenom => name;
+
   @override
   String toString() {
     return 'User(id: $id, name: $name, email: $email, role: ${role.label})';

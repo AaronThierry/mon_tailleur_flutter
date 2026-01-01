@@ -74,7 +74,7 @@ class _CommandesListScreenState extends State<CommandesListScreen> {
     final confirm = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
-        backgroundColor: AppTheme.cardDark,
+        backgroundColor: AppTheme.cardBackground,
         title: Text(
           'Confirmer la suppression',
           style: GoogleFonts.poppins(color: Colors.white),
@@ -128,9 +128,9 @@ class _CommandesListScreenState extends State<CommandesListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppTheme.backgroundDark,
+      backgroundColor: AppTheme.darkBackground,
       appBar: AppBar(
-        backgroundColor: AppTheme.backgroundDark,
+        backgroundColor: AppTheme.darkBackground,
         elevation: 0,
         title: Text(
           'Commandes',
@@ -321,7 +321,7 @@ class _CommandesListScreenState extends State<CommandesListScreen> {
     return Container(
       margin: EdgeInsets.only(bottom: 16),
       decoration: BoxDecoration(
-        color: AppTheme.cardDark,
+        color: AppTheme.cardBackground,
         borderRadius: BorderRadius.circular(16),
         border: commande.estEnRetard
             ? Border.all(color: Colors.orange, width: 2)
@@ -366,7 +366,7 @@ class _CommandesListScreenState extends State<CommandesListScreen> {
                     ),
                     PopupMenuButton<String>(
                       icon: Icon(Icons.more_vert, color: AppTheme.textSecondary),
-                      color: AppTheme.cardDark,
+                      color: AppTheme.cardBackground,
                       onSelected: (value) {
                         if (value == 'edit') {
                           _navigateToForm(commande: commande);

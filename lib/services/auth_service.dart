@@ -99,4 +99,9 @@ class AuthService {
     final token = await _httpService.getToken();
     return token != null;
   }
+
+  // Récupérer le token d'authentification
+  Future<String?> getToken() async {
+    return await _httpService.getToken();
+  }
 }

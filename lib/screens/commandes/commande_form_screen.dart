@@ -93,7 +93,7 @@ class _CommandeFormScreenState extends State<CommandeFormScreen> {
             colorScheme: ColorScheme.dark(
               primary: AppTheme.primaryBlue,
               onPrimary: Colors.white,
-              surface: AppTheme.cardDark,
+              surface: AppTheme.cardBackground,
               onSurface: Colors.white,
             ),
           ),
@@ -183,9 +183,9 @@ class _CommandeFormScreenState extends State<CommandeFormScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppTheme.backgroundDark,
+      backgroundColor: AppTheme.darkBackground,
       appBar: AppBar(
-        backgroundColor: AppTheme.backgroundDark,
+        backgroundColor: AppTheme.darkBackground,
         elevation: 0,
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.white),
@@ -247,7 +247,7 @@ class _CommandeFormScreenState extends State<CommandeFormScreen> {
                     Container(
                       padding: EdgeInsets.symmetric(horizontal: 16),
                       decoration: BoxDecoration(
-                        color: AppTheme.cardDark,
+                        color: AppTheme.cardBackground,
                         borderRadius: BorderRadius.circular(12),
                         border: Border.all(
                           color: AppTheme.primaryBlue.withOpacity(0.3),
@@ -263,7 +263,7 @@ class _CommandeFormScreenState extends State<CommandeFormScreen> {
                             ),
                           ),
                           isExpanded: true,
-                          dropdownColor: AppTheme.cardDark,
+                          dropdownColor: AppTheme.cardBackground,
                           icon: Icon(Icons.arrow_drop_down, color: Colors.white),
                           items: _clients.map((client) {
                             return DropdownMenuItem<Client>(
@@ -365,7 +365,7 @@ class _CommandeFormScreenState extends State<CommandeFormScreen> {
                       child: Container(
                         padding: EdgeInsets.all(16),
                         decoration: BoxDecoration(
-                          color: AppTheme.cardDark,
+                          color: AppTheme.cardBackground,
                           borderRadius: BorderRadius.circular(12),
                           border: Border.all(
                             color: AppTheme.primaryBlue.withOpacity(0.3),
@@ -404,7 +404,7 @@ class _CommandeFormScreenState extends State<CommandeFormScreen> {
                     Container(
                       padding: EdgeInsets.symmetric(horizontal: 16),
                       decoration: BoxDecoration(
-                        color: AppTheme.cardDark,
+                        color: AppTheme.cardBackground,
                         borderRadius: BorderRadius.circular(12),
                         border: Border.all(
                           color: AppTheme.primaryBlue.withOpacity(0.3),
@@ -414,7 +414,7 @@ class _CommandeFormScreenState extends State<CommandeFormScreen> {
                         child: DropdownButton<StatutCommande>(
                           value: _selectedStatut,
                           isExpanded: true,
-                          dropdownColor: AppTheme.cardDark,
+                          dropdownColor: AppTheme.cardBackground,
                           icon: Icon(Icons.arrow_drop_down, color: Colors.white),
                           items: StatutCommande.values.map((statut) {
                             return DropdownMenuItem<StatutCommande>(
