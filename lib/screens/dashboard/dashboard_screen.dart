@@ -25,14 +25,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
   @override
   void initState() {
     super.initState();
-    _initService();
-    _loadStats();
+    _initAndLoadData();
   }
 
-  Future<void> _initService() async {
+  Future<void> _initAndLoadData() async {
     final authService = AuthService();
     final token = await authService.getToken();
     _dashboardService = DashboardService(token);
+    await _loadStats();
   }
 
   Future<void> _loadStats() async {
