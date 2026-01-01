@@ -6,6 +6,8 @@ import '../../services/auth_service.dart';
 import '../../services/profile_service.dart';
 import '../auth/login_screen_new.dart';
 import '../profile/edit_profile_screen.dart';
+import '../dashboard/dashboard_screen.dart';
+import '../commandes/commandes_list_screen.dart';
 import '../../widgets/curved_navigation_bar.dart';
 
 class HomeScreenNew extends StatefulWidget {
@@ -37,8 +39,8 @@ class _HomeScreenNewState extends State<HomeScreenNew> {
 
   List<Widget> _getPages() {
     return [
-      _DashboardPage(user: _currentUser),
-      _CommandesPage(),
+      DashboardScreen(user: _currentUser),
+      const CommandesListScreen(),
       _AddPage(), // Page centrale pour le bouton "Ajouter"
       _NotificationsPage(), // Page notifications
       _ProfilePage(

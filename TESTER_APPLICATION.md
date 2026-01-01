@@ -52,6 +52,7 @@ API_BASE_URL=http://10.0.2.2:8000/api
 ### Test 1 : Inscription
 
 
+
 1. Lancez l'application
 2. Cliquez sur "S'inscrire"
 3. Remplissez le formulaire :
